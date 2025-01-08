@@ -3,15 +3,16 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useTerminal } from '../hooks/useTerminal'
 import { TerminalLine } from './TerminalLine'
+// We keep this import for the external TerminalLine component
 import { TerminalHeader } from './TerminalHeader'
 import { TypeWriter } from './TypeWriter'
 import { GlitchText } from './GlitchText'
 
-type TerminalLineProps = {
+type TerminalLineContentProps = {
   content: string | JSX.Element
 }
 
-export function TerminalLine({ content }: TerminalLineProps) {
+function TerminalLineContent({ content }: TerminalLineContentProps) {
   if (typeof content === 'string') {
     return (
       <div className="font-mono">
@@ -230,7 +231,7 @@ export function Terminal() {
       <TerminalHeader />
       <div className="flex-grow overflow-auto p-4 font-mono">
         {history.map((line, index) => (
-          <TerminalLine key={index} content={line} />
+          <TerminalLineContent key={index} content={line} />
         ))}
       </div>
       <form onSubmit={handleSubmit} className="flex p-2 bg-black border-t border-green-500">
