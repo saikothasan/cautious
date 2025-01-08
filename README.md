@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dark Web Terminal Profile
 
-## Getting Started
+A mysterious and engaging personal profile website that simulates a dark web terminal interface. This project creates an interactive experience for visitors to explore your "hacker" persona through a command-line interface.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Realistic terminal interface with a dark theme
+- Interactive command system
+- Glitch text effect for headers
+- Typewriter animation for the hacking simulation
+- Responsive design
+- Command history navigation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```
+   git clone https://github.com/saikothasan/darkweb-terminal-profile.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Navigate to the project directory:
+   ```
+   cd darkweb-terminal-profile
+   ```
 
-## Learn More
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+   ```
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open your browser and visit `http://localhost:3000` to see the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+Visitors can interact with the terminal by typing commands and pressing Enter. Available commands include:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `help`: Show available commands
+- `about`: Display information about you
+- `skills`: List your skills
+- `experience`: Show your work experience
+- `education`: Display your educational background
+- `contact`: Show your contact information
+- `projects`: Display information about your projects
+- `clear`: Clear the terminal screen
+- `date`: Show the current date and time
+- `whoami`: Display the current user
+- `hack`: Initiate a fake hacking sequence
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Users can also use the up and down arrow keys to navigate through command history.
+
+## Customization
+
+To customize the content for your own profile:
+
+1. Open \`components/Terminal.tsx\`
+2. Locate the \`commands\` array
+3. Modify the content of each command's \`action\` function to reflect your personal information
+4. Update the \`HackingSimulation\` component if you want to change the hacking animation
+5. Adjust the styling in the components to match your preferred color scheme
+
+## Technologies Used
+
+- React
+- Next.js
+- TypeScript
+- Tailwind CSS
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/saikothasan/darkweb-terminal-profile/issues) if you want to contribute.
+
+## Author
+
+Your Name - [Your Website](https://yourwebsite.com)
+
+Project Link: [https://github.com/saikothasan/darkweb-terminal-profile](https://github.com/saikothasan/darkweb-terminal-profile)
+
