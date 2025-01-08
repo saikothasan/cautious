@@ -36,6 +36,6 @@ export function useTerminal(commands: Command[]) {
     return null
   }, [commandHistory, historyIndex])
 
-  return { history, executeCommand } as const
+  return { history, executeCommand, navigateHistory }
 }
 
