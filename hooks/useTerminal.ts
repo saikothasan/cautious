@@ -7,7 +7,7 @@ type Command = {
 }
 
 export function useTerminal(commands: Command[]) {
-  const [history, setHistory] = useState<string[]>(['Welcome to my terminal profile!', 'Type "help" to see available commands.'])
+  const [history, setHistory] = useState<(string | JSX.Element)[]>(['Welcome to my terminal profile!', 'Type "help" to see available commands.'])
   const [commandHistory, setCommandHistory] = useState<string[]>([])
   const [historyIndex, setHistoryIndex] = useState(-1)
 
@@ -36,6 +36,6 @@ export function useTerminal(commands: Command[]) {
     return null
   }, [commandHistory, historyIndex])
 
-  return { history, executeCommand, navigateHistory }
+  return { history, executeCommand } as const
 }
 
