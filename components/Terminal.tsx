@@ -2,8 +2,6 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import { useTerminal } from '../hooks/useTerminal'
-import { TerminalLine } from './TerminalLine'
-// We keep this import for the external TerminalLine component
 import { TerminalHeader } from './TerminalHeader'
 import { TypeWriter } from './TypeWriter'
 import { GlitchText } from './GlitchText'
@@ -26,7 +24,6 @@ function TerminalLineContent({ content }: TerminalLineContentProps) {
   }
   return <div className="font-mono text-gray-300">{content}</div>
 }
-
 
 const commands = [
   {
